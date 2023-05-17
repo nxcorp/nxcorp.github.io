@@ -1,6 +1,7 @@
 <!-- This is the HTML code for the landing page -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
   <!-- This is the link to the external CSS file -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- This is the container for the headline -->
   <div class="headline">
@@ -20,7 +22,8 @@
   <!-- This is the container for the video -->
   <div class="video">
     <!-- This is the embedded video from YouTube -->
-    <iframe width="800" height="450" src="https://www.youtube.com/embed/B6NBr9o4Yco" frameborder="0" allowfullscreen></iframe>
+    <iframe width="800" height="450" src="https://www.youtube.com/embed/B6NBr9o4Yco" frameborder="0"
+      allowfullscreen></iframe>
   </div>
   <!-- This is the container for the button -->
   <div class="button">
@@ -30,93 +33,93 @@
   <style>
     /* This is the CSS code for the landing page */
 
-/* This is the style for the body element */
-body {
-  /* This is the background image that covers the entire page */
-  background: url("https://i.imgur.com/aHEseka.jpg") no-repeat center center fixed;
-  /* This is the property that makes the background image responsive */
-  background-size: cover;
-}
+    /* This is the style for the body element */
+    body {
+      /* This is the background image that covers the entire page */
+      background: url("https://i.imgur.com/aHEseka.jpg") no-repeat center center fixed;
+      /* This is the property that makes the background image responsive */
+      background-size: cover;
+    }
 
-/* This is the style for the headline element */
-.headline {
-  /* This is the property that centers the headline */
-  font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
-  text-align: center;
-}
+    /* This is the style for the headline element */
+    .headline {
+      /* This is the property that centers the headline */
+      font-family: "Roboto", sans-serif;
+      font-size: 1.5rem;
+      text-align: center;
+    }
 
-/* This is the style for the headline text */
-h1 {
-  /* This is the property that adds an outline to the text */
-  padding: 50px;
-  color: white;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
+    /* This is the style for the headline text */
+    h1 {
+      /* This is the property that adds an outline to the text */
+      padding: 50px;
+      color: white;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
 
-/* This is the style for the video element */
-.video {
-  /* This is the property that centers the video */
-  display: flex;
-  justify-content: center;
-}
+    /* This is the style for the video element */
+    .video {
+      /* This is the property that centers the video */
+      display: flex;
+      justify-content: center;
+    }
 
-/* This is the style for the button element */
-.button {
-  /* This is the property that centers the button */
-  padding: 50px;
-  display: flex;
-  justify-content: center;
-}
+    /* This is the style for the button element */
+    .button {
+      /* This is the property that centers the button */
+      padding: 50px;
+      display: flex;
+      justify-content: center;
+    }
 
-/* This is the style for the button link */
-a {
-  /* This is the property that hides the button initially */
-  display: none;
-  /* This is the property that adds some padding to the button */
-  padding: 10px;
-  /* This is the property that adds some margin to the button */
-  margin: 20px;
-  /* This is the property that adds some border radius to the button */
-  border-radius: 10px;
-  /* This is the property that adds a color gradient to the button */
-  background: linear-gradient(to right, #ff0000, #ffff00);
-  color:white;
-  font-size: 1.5rem;
-  font-family: "Roboto", sans-serif;
-}
+    /* This is the style for the button link */
+    a {
+      /* This is the property that hides the button initially */
+      display: none;
+      /* This is the property that adds some padding to the button */
+      padding: 10px;
+      /* This is the property that adds some margin to the button */
+      margin: 20px;
+      /* This is the property that adds some border radius to the button */
+      border-radius: 10px;
+      /* This is the property that adds a color gradient to the button */
+      background: linear-gradient(to right, #ff0000, #ffff00);
+      color: white;
+      font-size: 1.5rem;
+      font-family: "Roboto", sans-serif;
+    }
 
-/* This is a media query that makes sure the site looks good on smaller devices */
-@media screen and (max-width:600px) {
-  
-   /* This is a rule that reduces the size of the video on smaller devices */
-   iframe {
-     width:300px;
-     height:169px;
-   }
-}
+    /* This is a media query that makes sure the site looks good on smaller devices */
+    @media screen and (max-width:600px) {
 
+      /* This is a rule that reduces the size of the video on smaller devices */
+      iframe {
+        width: 300px;
+        height: 169px;
+      }
+    }
   </style>
   <script>
     //This is a JavaScript code for adding functionality to your landing page
 
-//This function runs when your page loads
-window.onload = function() {
+    //This function runs when your page loads
+    window.onload = function () {
 
-//This variable stores a reference to your button element
-var button = document.getElementById("cta");
+      //This variable stores a reference to your button element
+      var button = document.getElementById("cta");
 
-//This function shows your button after a delay of 20 seconds
-function showButton() {
-   //This statement changes your button's display property to block
-   button.style.display = "block";
-}
+      //This function shows your button after a delay of 20 seconds
+      function showButton() {
+        //This statement changes your button's display property to block
+        button.style.display = "block";
+      }
 
-//This statement calls your function after a delay of 20 seconds
-setTimeout(showButton,200);
+      //This statement calls your function after a delay of 20 seconds
+      setTimeout(showButton, 200);
 
-}
+    }
 
   </script>
 </body>
+
 </html>
