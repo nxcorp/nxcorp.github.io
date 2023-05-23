@@ -1,0 +1,225 @@
+/* This is the CSS file for the web site */
+/* It contains the style and layout of the web site */
+/* It uses media queries to make the web site responsive for different screen sizes */
+
+* {
+    /* This applies to all elements on the web site */
+    /* It sets some basic properties such as margin, padding, box-sizing and font-family */
+
+    margin: 0;
+    /* This removes any default margin from all elements */
+    padding: 0;
+    /* This removes any default padding from all elements */
+    box-sizing: border-box;
+    /* This makes sure that padding and border are included in width and height calculations */
+    font-family: 'Roboto', sans-serif;
+    /* This sets the font-family of all elements to Roboto from Google Fonts */
+}
+
+.container {
+    /* This applies to the container div that wraps all elements on the web site */
+    /* It sets some properties such as width, max-width, margin and background */
+
+    width: 80%;
+    /* This sets the width of the container div to 80% of its parent element (the body) */
+    max-width: 800px;
+    /* This sets a maximum width of 800px for the container div */
+    margin: auto;
+    /* This centers the container div horizontally by setting equal margins on both sides */
+    background: #f0f0f0;
+    /* This sets a light gray background color for the container div */
+}
+
+.message {
+    /* This applies to the message div that shows a message above the image */
+    /* It sets some properties such as height, display, align-items, justify-content, color and font-size */
+
+    height: 50px;
+    /* This sets a fixed height of 50px for the message div */
+    display: flex;
+    /* This sets display to flex for aligning items inside it */
+    align-items: center;
+    /* This vertically centers items inside it */
+    justify-content: center;
+    /* This horizontally centers items inside it */
+    color: #333333;
+    /* This sets a dark gray color for text inside it */
+    font-size: 20px;
+    /* This sets a font-size of 20px for text inside it */
+}
+
+.message span {
+    /* This applies to both spans inside message div that toggle between two messages using JavaScript */
+    /* It sets some properties such as position, opacity and transition */
+
+    position: absolute;
+    /* This positions both spans absolutely relative to their parent element (the message div) */
+    opacity: 0;
+    /* This makes both spans invisible by setting their opacity to zero */
+    transition: opacity .5s ease-in-out;
+    /* This adds a transition effect for opacity with duration of .5 seconds and ease-in-out timing function */
+}
+
+.message span.active {
+    /*This applies only when one of spans inside message div has active class added by JavaScript*/
+    /*It makes span visible by setting its opacity to one*/
+
+    opacity: 1;
+    /*This makes span visible by setting its opacity to one*/
+}
+
+.image {
+    /*This applies to image div that shows an image above button*/
+    /*It sets some properties such as height, display, align-items, justify-content*/
+
+    height: 300px;
+    /*This sets fixed height of
+  300px for image div*/
+    display: flex;
+    /*This sets display
+  to flex for aligning items inside it*/
+    align-items: center;
+    /*This vertically centers items inside it*/
+    justify-content: center;
+    /*This horizontally centers items inside it*/
+}
+
+.image img {
+    /*This applies to img tag inside image div that links
+  to an image source*/
+    /*It sets some properties such as max-width,
+  max-height*/
+
+    max-width: 100%;
+    /*This makes sure img does not exceed width
+  of its parent element (the image div)*/
+    max-height: 100%;
+    /*This makes sure img does not exceed height
+  of its parent element (the image div)*/
+}
+
+.button {
+    /*This applies to button div that shows
+  a button with link below image*/
+    /*It sets some properties such as height,
+  display, align-items, justify-content*/
+
+    height: 50px;
+    /*This sets fixed height
+  of
+  50px for button div*/
+    display: flex;
+    /*This sets display
+  to flex for aligning items inside it*/
+    align-items: center;
+    /*This vertically centers items inside it*/
+    justify-content: center;
+    /*This horizontally centers items inside it*/
+}
+
+.button a {
+    /*This applies to a tag inside button div
+  that links
+  to URL and has some text*/
+    /*It sets some properties such as padding,
+  background,
+  color,
+  border,
+  text-decoration,
+  font-size*/
+
+    padding: 10px;
+    /*This adds some padding around text inside it*/
+    background: #007bff;
+    /*This sets blue background color
+  for it*/
+    color: #ffffff;
+    /*This sets white color
+  for text inside it*/
+    border: none;
+    /*This removes any default border from it*/
+    text-decoration: none;
+    /*This removes any default underline from text inside it*/
+    font-size: 18px;
+    /*This sets font-size
+  of
+  18px for text inside it*/
+}
+
+.button a:hover {
+    /*This applies only when mouse cursor hovers over a tag inside button div*/
+    /*It changes background color
+ to darker blue and increases size*/
+ 
+    background:#0069d9;/*This changes background color
+ to darker blue*/
+    transform: scale(1.1); /*This increases size by 10% using transform property and scale function*/
+ }
+
+.security {
+    /*This applies to security div that shows
+  an image below button that implies security*/
+    /*It sets some properties such as height,
+  display,
+  align-items,
+  justify-content*/
+
+    height: 50px;
+    /*This sets fixed height
+  of
+  50px for security div*/
+    display: flex;
+    /*This sets display
+  to flex for aligning items inside it*/
+    align-items: center;
+    /*This vertically centers items inside it*/
+    justify-content: center;
+    /*This horizontally centers items inside it*/
+}
+
+.security img {
+    /*This applies to img tag inside security div that links
+  to an image source*/
+    /*It sets some properties such as max-width,
+  max-height*/
+
+    max-width: 100%;
+    /*This makes sure img does not exceed width
+  of its parent element (the security div)*/
+    max-height: 100%;
+    /*This makes sure img does not exceed height
+  of its parent element (the security div)*/
+}
+
+@media (max-width: 600px) {
+    /* This applies only when the screen width is less than or equal to 600px */
+    /* It adjusts some properties for smaller screens */
+
+    .container {
+        /* This applies to the container div that wraps all elements on the web site */
+        /* It sets some properties such as width and background */
+
+        width: 100%;
+        /* This sets the width of the container div to 100% of its parent element (the body) */
+        background: #ffffff;
+        /* This sets a white background color for the container div */
+    }
+
+    .message {
+        /* This applies to the message div that shows a message above the image */
+        /* It sets some properties such as font-size */
+
+        font-size: 16px;
+        /* This sets a font-size of 16px for text inside it */
+    }
+
+    .button a {
+        /* This applies to a tag inside button div
+  that links
+  to URL and has some text*/
+        /* It sets some properties such as font-size */
+
+        font-size: 14px;
+        /* This sets a font-size of 14px for text inside it */
+    }
+}
