@@ -1,0 +1,274 @@
+/* This is the CSS file that defines the style and layout of the web site */
+
+* {
+    /* This is a universal selector that applies to all elements */
+    box-sizing: border-box;
+    /* This property makes sure that padding and border are included in the element's total width and height */
+    margin: 0;
+    /* This property removes any default margin from all elements */
+    padding: 0;
+    /* This property removes any default padding from all elements */
+}
+
+#container {
+    /* This is an id selector that applies to the element with id="container" */
+    display: flex;
+    /* This property makes the element a flex container and allows its children to be aligned and distributed */
+    flex-direction: column;
+    /* This property sets the direction of the flex items to be vertical */
+    align-items: center;
+    /* This property aligns the flex items horizontally in the center */
+    justify-content: center;
+    /* This property aligns the flex items vertically in the center */
+    height: 100vh;
+    /* This property sets the height of the element to be equal to 100% of the viewport height */
+    width: 100vw;
+    /* This property sets the width of the element to be equal to 100% of the viewport width */
+}
+
+#message {
+    /* This is an id selector that applies to the element with id="message" */
+    position: absolute;
+    /* This property sets the position of the element to be relative to its closest positioned ancestor (in this case, body) */
+    top: 0;
+    /* This property sets the top edge of the element to be aligned with the top edge of its parent */
+    left: 0;
+    /* This property sets the left edge of the element to be aligned with the left edge of its parent */
+    right: 0;
+    /* This property sets the right edge of the element to be aligned with
+  the right edge of its parent */
+    bottom: 0;
+    /* This property sets
+  the bottom edge of
+  the element to be aligned with
+  the bottom edge of
+  its parent */
+
+    background-color: rgba(0, 0, 0, 0.5);
+    /* This property sets
+  the background color of
+  the element to be black with
+  50% opacity */
+    display: flex;
+    /* This property makes
+  the element a flex container and allows its children to be aligned and distributed */
+    align-items: center;
+    /* This property aligns
+  the flex items horizontally in
+  the center */
+    justify-content: center;
+    /* This property aligns
+  the flex items vertically in
+  the center */
+}
+
+#text {
+    /* This is an id selector that applies to
+  the element with id="text" */
+    color: rgb(99, 245, 165);
+    /* This property sets
+  the text color of
+  the element to be white */
+    font-family: 'Roboto', sans-serif;
+    /* This property sets
+  the font family of
+  the element to be Roboto from Google Fonts */
+    font-size: 48px;
+    /* This property sets
+  the font size of
+  the element to be 24 pixels */
+    animation: fade-in-out 3s ease-in-out forwards;
+    /* This property applies an animation to
+  the element with
+  the name fade-in-out, duration 3 seconds, easing function ease-in-out, and fill mode forwards (meaning it will retain its final state) */
+}
+
+@keyframes fade-in-out {
+
+    /* This is a keyframes rule that defines
+  the animation named fade-in-out */
+    0% {
+        /* This is a keyframe selector that specifies
+  the starting state of
+  the animation */
+        opacity: 0;
+        /* This property sets
+  the opacity of
+  the element to be 0 (fully transparent) */
+    }
+
+    50% {
+        /* This is a keyframe selector that specifies
+  the middle state of
+  the animation */
+        opacity: 1;
+        /* This property sets
+  the opacity of
+  the element to be 1 (fully opaque) */
+        content: "Protegendo sua conexão...";
+        /* This property sets
+  the content of
+  the element to be "Securing your connection..." */
+    }
+
+    75% {
+        /* This is a keyframe selector that specifies
+  the third quarter state of
+  the animation */
+        opacity: 1;
+        /* This property sets
+  the opacity of
+  the element to be 1 (fully opaque) */
+        content: "Your connection is secure.";
+        /*
+  
+  This property sets
+  the content of
+  the element to be "Your connection is secure." */
+    }
+
+    100% {
+        /* This is a keyframe selector that specifies
+  the final state of
+  the animation */
+        opacity: 0;
+        /*
+  
+  This property sets 
+  the opacity of 
+  the element to be 0 (fully transparent) */
+    }
+}
+
+#top-image {
+    /*
+  
+  This is an id selector that applies to 
+  the element with id="top-image" */
+    width: auto;
+    /*
+  This property sets 
+  the width of 
+  the element to be adjusted according to its aspect ratio */
+    height: calc(50vh - (100px + (30px /2)));
+    /*
+  This property sets 
+  the height of 
+  the element to be equal to half of 
+  the viewport height minus 
+  100 pixels for 
+  the button margin and half of 
+  30 pixels for 
+  the bottom image margin */
+    margin-bottom: calc(100px - (150px /2));
+    /*
+  This property sets 
+  the bottom margin of 
+  the element to be equal to 
+  100 pixels minus half of 
+  30 pixels for 
+  the bottom image margin */
+    object-fit: cover;
+    /*
+  This property sets 
+  how 
+  the content of 
+  the element should fit its container without stretching or cropping */
+}
+
+#button {
+    /*
+  
+  This is an id selector that applies to 
+  the element with id="button" */
+    display: inline-block;
+    /*
+  This property sets 
+  how 
+  the element should behave as a block-level box but allow other elements to flow around it */
+    padding: 15px 30px;
+    /*
+  This property sets 
+  how much space should be added around 
+  the content of 
+  the element */
+    border: none;
+    /*
+  This property removes any border from 
+  the element */
+    background-color: #3281f7;
+    /*
+  This property sets 
+  how color should fill up 
+  background area behind text or images within an object. In this case, it's red. */
+
+    color: white;
+    /*
+  This property sets how text color should appear within an object. In this case, it's white. */
+
+    font-family: 'Roboto', sans-serif;
+    /*
+  This property sets how font family should appear within an object. In this case, it's Roboto from Google Fonts. */
+
+    font-size: 24px;
+    /*
+  This property sets how font size should appear within an object. In this case, it's 24 pixels. */
+
+    text-decoration: none;
+    /*
+  This property removes any text decoration such as underline or overline from an object. */
+
+    cursor: pointer;
+    /*
+  This property changes how cursor should look when hovering over an object. In this case, it's a pointer. */
+
+    transition: transform .3s ease-in-out;
+    /*
+  This property adds a transition effect when changing how object should transform such as scale or rotate. In this case, it's .3 seconds long with easing function ease-in-out. */
+
+}
+
+#button:hover {
+    /*
+  
+  This is a pseudo-class selector that applies when mouse pointer hovers over an object with id="button". */
+
+    transform: scale(1.1);
+    /*
+  This property changes how object should scale up or down. In this case, it's scaled up by factor of .1 or by ten percent. */
+
+}
+
+#bottom-image {
+    /*
+
+  This is an id selector that applies to an object with id="bottom-image" */
+    width: 10%;
+    height: auto;
+    /*
+This property sets 
+the width of 
+the element to be adjusted according to its aspect ratio */
+    height: calc(50vh - (100px + (30px /2)));
+    /*
+This property sets 
+the height of 
+the element to be equal to half of 
+the viewport height minus 
+100 pixels for 
+the button margin and half of 
+30px for 
+the top image margin */
+    margin-top: -150px;
+    /*
+This property sets 
+the top margin of 
+the element to be equal to 
+30 pixels */
+    object-fit: contain;
+    /*
+This property sets 
+how 
+the content of 
+the element should fit its container without stretching or cropping */
+}

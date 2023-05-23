@@ -1,0 +1,240 @@
+/* This is the CSS file for the web site */
+/* It contains the style and layout of the web site */
+
+* {
+  /* This applies to all elements on the web site */
+  box-sizing: border-box;
+  /* This makes sure that padding and border are included in the element's width and height */
+  margin: 0;
+  /* This removes any default margin from all elements */
+  padding: 0;
+  /* This removes any default padding from all elements */
+}
+
+.container {
+  /* This applies to the container div that wraps all the content */
+  display: flex;
+  /* This makes the container a flex container */
+  flex-direction: column;
+  /* This sets the direction of the flex items to be vertical */
+  align-items: center;
+  /* This aligns the flex items horizontally to the center */
+  justify-content: center;
+  /* This aligns the flex items vertically to the center */
+  height: 100vh;
+  /* This sets the height of the container to be equal to 100% of the viewport height */
+  width: 100vw;
+    /* This property sets the width of the element to be equal to 100% of the viewport width */
+  background: linear-gradient(to right, #f9fafa, #a4a5a5, #f9fafa);
+  /* This sets a linear gradient background for the container */
+}
+
+#message {
+  /* This is an id selector that applies to the element with id="message" */
+  position: absolute;
+  /* This property sets the position of the element to be relative to its closest positioned ancestor (in this case, body) */
+  top: 0;
+  /* This property sets the top edge of the element to be aligned with the top edge of its parent */
+  left: 0;
+  /* This property sets the left edge of the element to be aligned with the left edge of its parent */
+  right: 0;
+  /* This property sets the right edge of the element to be aligned with
+the right edge of its parent */
+  bottom: 0;
+  /* This property sets
+the bottom edge of
+the element to be aligned with
+the bottom edge of
+its parent */
+
+  background-color: rgba(0, 0, 0, 0.5);
+  /* This property sets
+the background color of
+the element to be black with
+50% opacity */
+  display: flex;
+  /* This property makes
+the element a flex container and allows its children to be aligned and distributed */
+  align-items: center;
+  /* This property aligns
+the flex items horizontally in
+the center */
+  justify-content: center;
+  /* This property aligns
+the flex items vertically in
+the center */
+}
+
+#text {
+  /* This is an id selector that applies to
+the element with id="text" */
+  color: rgb(99, 245, 165);
+  /* This property sets
+the text color of
+the element to be white */
+  font-family: 'Roboto', sans-serif;
+  /* This property sets
+the font family of
+the element to be Roboto from Google Fonts */
+  font-size: 48px;
+  /* This property sets
+the font size of
+the element to be 24 pixels */
+  animation: fade-in-out 3s ease-in-out forwards;
+  /* This property applies an animation to
+the element with
+the name fade-in-out, duration 3 seconds, easing function ease-in-out, and fill mode forwards (meaning it will retain its final state) */
+}
+
+@keyframes fade-in-out {
+
+  /* This is a keyframes rule that defines
+the animation named fade-in-out */
+  0% {
+      /* This is a keyframe selector that specifies
+the starting state of
+the animation */
+      opacity: 0;
+      /* This property sets
+the opacity of
+the element to be 0 (fully transparent) */
+  }
+
+  50% {
+      /* This is a keyframe selector that specifies
+the middle state of
+the animation */
+      opacity: 1;
+      /* This property sets
+the opacity of
+the element to be 1 (fully opaque) */
+      content: "Protegendo sua conexão...";
+      /* This property sets
+the content of
+the element to be "Securing your connection..." */
+  }
+
+  75% {
+      /* This is a keyframe selector that specifies
+the third quarter state of
+the animation */
+      opacity: 1;
+      /* This property sets
+the opacity of
+the element to be 1 (fully opaque) */
+      content: "Your connection is secure.";
+      /*
+
+This property sets
+the content of
+the element to be "Your connection is secure." */
+  }
+
+  100% {
+      /* This is a keyframe selector that specifies
+the final state of
+the animation */
+      opacity: 0;
+      /*
+
+This property sets 
+the opacity of 
+the element to be 0 (fully transparent) */
+  }
+}
+
+.content {
+  /* This applies to
+the div that contains
+the main content of
+the web site */
+  display: flex;
+  /*This makes
+the content a flex
+container */
+  flex-direction:
+    column;
+  /*This sets
+the direction of
+the flex items
+to be vertical */
+  align-items:
+    center;
+  /*This aligns
+the flex items
+horizontally to
+the center */
+  justify-content:
+    center;
+  /*This aligns
+the flex items
+vertically to
+the center */
+  width: 50%;
+  /*This sets the width of the content to be equal to 80% of the viewport width*/
+}
+
+#top-image {
+  /*This applies to the image element that displays thefirst image above the button*/
+  width: 20%;
+  /*This setsthewidthoftheimagetobeequalto100%ofitsparentelement(thecontent)*/
+  height: auto;
+  /*This setstheheightoftheimagetobescaledproportionallytoitswidth*/
+  object-fit: contain;
+  /*This setshowtheimagewillfitwithinitsbox*/
+  margin-bottom: 50px;
+  margin-top: -50px
+  /*This setshowmuchspacewillbetherebetweentheimageandthefollowingelement(thebutton)*/
+}
+
+#button {
+  /*This appliestotheanchorelementthatactsasabuttonwithalink*/
+  display: block;
+  /*This makesthebuttonablock-levelelementthatoccupiestheentirehorizontalrow*/
+  width: 200px;
+  /*This setsthewidthofthebuttontobe200pixels*/
+  height: 50px;
+  /*This setstheheightofthebuttontobe50pixels*/
+  line-height: 50px;
+  /*This setstheverticalalignmentofthetextinsidethebuttontobecentered*/
+  text-align: center;
+  /*This setsthehorizontalalignmentofthetextinsidethebuttontobecentered*/
+  text-decoration: none;
+  /*This removestheunderlinestylefromthetextinsidethebutton*/
+  font-family: 'Roboto', sans-serif;
+  /*This setsthefontfamilyofthetextinsidethebuttontobeRobotofromGoogleFonts*/
+  font-size: 20px;
+  /*This setsthefontsizeofthetextinsidethebuttontobe20pixels*/
+  font-weight: bold;
+  /*This makesthetextinsidethebuttonbold*/
+  color: white;
+  /*This setsthecolorofthetextinsidethebuttontobewhite*/
+  background-color: #0070b1;
+  /*This setsthebackgroundcolorofthebuttontobeorange*/
+  border: none;
+  /*This removestheborderstylefromthebutton*/
+  border-radius: 25px;
+  /*This makesthecornersofthebuttonroundedby25pixels*/
+  cursor: pointer;
+  /*This changethecursortobeapointerwhentheuserhoveroverthebutton*/
+  transition: transform0.3sease-in-out;
+  /*This addsa transitioneffectwhenthebuttonischangedinsizeorposition*/
+}
+
+#button:hover {
+  /*This appliestothebuttontwhenitishoveredoverbythecursor*/
+  transform: scale(1.1);
+  /*This increasesthesizeofthebuttonby10%whentheuserhoveroverit*/
+}
+
+#bottom-image {
+  /*This appliestotheimageelementthatdisplaysthelastimagebelowthebutton*/
+  width: 10%;
+  /*This setsthewidthoftheimagetobeequalto100%ofitsparentelement(thecontent)*/
+  height: auto;
+  /*This setstheheightoftheimagetobescaledproportionallytoitswidth*/
+  object-fit: contain;
+  /*This setshowtheimagewillfitwithinitsbox*/
+  margin-top: 10px;
+  /*This setshowmuchspacewillbetherebetweentheimageandtheprecedingelement(thebutton)*/
+}
